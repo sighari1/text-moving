@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Zen Dots", cursive;
+  background: #8854d0;
+}
+
+h1 {
+  color: #0fb9b1;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.link {
+  color: #fa8231;
+  text-decoration: none;
+  display: block;
+  border: 5px solid #fa8231;
+  margin: 20px auto;
+  position: relative;
+  width: 300px;
+  height: 50px;
+  line-height: 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.link:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+
+.link span {
+  display: block;
+  transition: 0.3s;
+}
+
+.link:hover:before {
+  transform: translateX(0);
+}
+.link:hover span{
+    transform: translateX(100%)
+}
